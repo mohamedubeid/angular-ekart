@@ -6,7 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = [
+  products: {
+    id?: number;
+    name?: string;
+    description?: string;
+    brand?: string;
+    gender?: string;
+    category?: string;
+    size?: number[];
+    color?: string[];
+    price?: number;
+    is_in_inventory?: boolean;
+    items_left?: number;
+    imageURL?: string;
+    slug?: string;
+  }[] = [
     {
       id: 1,
       name: "Classic White T-Shirt",
@@ -84,7 +98,37 @@ export class ProductListComponent {
     }
   ];
 
+  filteredProducts: {
+    id?: number;
+    name?: string;
+    description?: string;
+    brand?: string;
+    gender?: string;
+    category?: string;
+    size?: number[];
+    color?: string[];
+    price?: number;
+    is_in_inventory?: boolean;
+    items_left?: number;
+    imageURL?: string;
+    slug?: string;
+  }[] = this.products;
+
   inStockCount: number = this.products.filter(product => product.is_in_inventory).length;;
   outOfStockCount: number = this.products.filter(product => !product.is_in_inventory).length;;
-  allProductsCount: number = this.products.length;;
+  allProductsCount: number = this.products.length;
+
+  onFilterChanged(value: string) {
+    switch (value) {
+      case 'true':
+        this.filteredProducts = this.products.filter(product => product.is_in_inventory);
+        break;
+      case 'false':
+        this.filteredProducts = this.products.filter(product => !product.is_in_inventory);
+        break;
+      default:
+        this.filteredProducts = this.products;
+    };
+  }
+
 }

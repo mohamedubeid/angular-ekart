@@ -1,12 +1,12 @@
 <div class="filter-container">
   <span>Filter: </span>
 
-  <input type="radio" name="filter" value="All" />
+  <input type="radio" name="filter" value="all" [defaultChecked]="true" (change)="onSelectedFilterRadioButtonChnaged($event)" />
   <span>{{'All(' + all + ')'}}</span>
 
-  <input type="radio" name="filter" value="true" />
+  <input type="radio" name="filter" value="true" (change)="onSelectedFilterRadioButtonChnaged($event)" />
   <span>{{'In Stock(' + inSotck + ')'}}</span>
 
-  <input type="radio" name="filter" value="false"/>
+  <input type="radio" name="filter" value="false" (change)="onSelectedFilterRadioButtonChnaged($event)" />
   <span>{{'Out of Stock(' + outOfStock + ')'}}</span>
 </div>

@@ -6,7 +6,7 @@
     <p><strong>Brand:</strong> {{ product.brand }}</p>
     <p><strong>Category:</strong> {{ product.category }}</p>
     <p><strong>Price:</strong> ${{ product.price }}</p>
-    <p><strong>Available:</strong> <span [ngStyle]="{color:  product.is_in_inventory? 'green' : 'red'}">{{ product.is_in_inventory ? ' In stock' : ' Out of stock' }}</span></p>
+    <p><strong>Available: <span [ngStyle]="{color:  product.is_in_inventory? 'green' : 'red'}">{{ product.is_in_inventory ? ' In stock' : ' Out of stock' }}</span> </strong></p>
     <p *ngIf="product.is_in_inventory"><strong>Items left:</strong> {{ product.items_left }}</p>
   </div>
 </div>

@@ -83,5 +83,8 @@ export class ProductListComponent {
       slug: "smart-watch"
     }
   ];
-  
+
+  inStockCount: number = this.products.filter(product => product.is_in_inventory).length;;
+  outOfStockCount: number = this.products.filter(product => !product.is_in_inventory).length;;
+  allProductsCount: number = this.products.length;;
 }

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ContainerComponent {
 
+  searchTextValue: string = '';
+
+  handleSearch(searchText: string) {
+    this.searchTextValue = searchText;
+  }
 }

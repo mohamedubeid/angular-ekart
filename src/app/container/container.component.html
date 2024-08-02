@@ -10,6 +10,6 @@
   <button (click)="incrementCartValue()">+</button>
  <input (input)="onNameChnage($event)"><br>
   <p>name={{ name }}</p> -->
-  <app-search></app-search>
-  <product-list></product-list>
+  <app-search (searchTextChanged)="handleSearch($event)"></app-search>
+  <product-list [searchFilterValue]="searchTextValue"></product-list>
 </div>

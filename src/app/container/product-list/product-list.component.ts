@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'product-list',
@@ -113,6 +113,9 @@ export class ProductListComponent {
     imageURL?: string;
     slug?: string;
   }[] = this.products;
+
+  @Input()
+  searchFilterValue: string = '';
 
   inStockCount: number = this.products.filter(product => product.is_in_inventory).length;;
   outOfStockCount: number = this.products.filter(product => !product.is_in_inventory).length;;

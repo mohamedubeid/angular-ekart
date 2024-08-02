@@ -1,0 +1,45 @@
+.ekart--products--container {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 17vh;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  margin: 16px;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}

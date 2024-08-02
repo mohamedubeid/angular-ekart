@@ -118,17 +118,10 @@ export class ProductListComponent {
   outOfStockCount: number = this.products.filter(product => !product.is_in_inventory).length;;
   allProductsCount: number = this.products.length;
 
+  selectedFilterRadioButton: string = 'all';
+
   onFilterChanged(value: string) {
-    switch (value) {
-      case 'true':
-        this.filteredProducts = this.products.filter(product => product.is_in_inventory);
-        break;
-      case 'false':
-        this.filteredProducts = this.products.filter(product => !product.is_in_inventory);
-        break;
-      default:
-        this.filteredProducts = this.products;
-    };
+    this.selectedFilterRadioButton = value;
   }
 
 }

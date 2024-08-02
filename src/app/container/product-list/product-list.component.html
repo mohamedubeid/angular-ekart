@@ -5,5 +5,7 @@
   (selectedFilterRadioButtonChnaged)="onFilterChanged($event)"
 ></app-filter>
 <div class="product-list">
-  <app-product *ngFor="let product of filteredProducts" [product]="product"></app-product>
+  <div *ngFor="let product of filteredProducts" >
+    <app-product [product]="product" *ngIf="selectedFilterRadioButton === 'all' || product.is_in_inventory?.toString() === selectedFilterRadioButton"></app-product>
+  </div>
 </div>

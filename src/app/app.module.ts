@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './container/product-list/product-list.component';
 import { ProductComponent } from './container/product-list/product/product.component';
 import { FilterComponent } from './container/product-list/filter/filter.component';
+import { SetBackground } from './CustomDirectives/SetBackground.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
     SearchComponent,
     ProductListComponent,
     ProductComponent,
-    FilterComponent
+    FilterComponent,
+    SetBackground
   ],
   imports: [
     BrowserModule,

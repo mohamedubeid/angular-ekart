@@ -15,6 +15,7 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
 import { SetBackground } from './CustomDirectives/SetBackground.directive';
 import { HighlightDirective } from './CustomDirectives/highlight.directive';
 import { HoverDirective } from './CustomDirectives/hover.directive';
+import { DemoHostbindingDirective } from './CustomDirectives/demo-hostbinding.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HoverDirective } from './CustomDirectives/hover.directive';
     FilterComponent,
     SetBackground,
     HighlightDirective,
-    HoverDirective
+    HoverDirective,
+    DemoHostbindingDirective
   ],
   imports: [
     BrowserModule,

@@ -3,10 +3,10 @@
   <div class="card-content">
     <h2 appHover>{{ product.name }}</h2>
     <p>{{ product.description }}</p>
-    <p><strong setBackground>Brand:</strong> {{ product.brand }}</p>
-    <p><strong setBackground>Category:</strong> {{ product.category }}</p>
-    <p><strong setBackground>Price:</strong> ${{ product.price }}</p>
-    <p><strong setBackground>Available: <span [ngStyle]="{color:  product.is_in_inventory? 'green' : 'red'}">{{ product.is_in_inventory ? ' In stock' : ' Out of stock' }}</span> </strong></p>
+    <p><strong [setBackground]="{backColor: 'yellow',textColor: 'orange'}">Brand:</strong> {{ product.brand }}</p>
+    <p><strong [setBackground]="{backColor: 'yellow',textColor: 'orange'}">Category:</strong> {{ product.category }}</p>
+    <p><strong [setBackground]="{backColor: 'yellow',textColor: 'orange'}">Price:</strong> ${{ product.price }}</p>
+    <p><strong [setBackground]="{backColor: 'yellow',textColor: 'orange'}">Available: <span [ngStyle]="{color:  product.is_in_inventory? 'green' : 'red'}">{{ product.is_in_inventory ? ' In stock' : ' Out of stock' }}</span> </strong></p>
     <p *ngIf="product.is_in_inventory"><strong>Items left:</strong> {{ product.items_left }}</p>
   </div>
 </div>

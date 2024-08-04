@@ -1,7 +1,7 @@
 <div class="card" appHighlight>
   <img [src]="product.imageURL" alt="{{ product.name }}">
   <div class="card-content">
-    <h2>{{ product.name }}</h2>
+    <h2 appHover>{{ product.name }}</h2>
     <p>{{ product.description }}</p>
     <p><strong setBackground>Brand:</strong> {{ product.brand }}</p>
     <p><strong setBackground>Category:</strong> {{ product.category }}</p>

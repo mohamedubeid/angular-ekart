@@ -5,7 +5,7 @@
   overflow: hidden;
   width: 300px;
   margin: 16px;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 .card img {
@@ -26,6 +26,15 @@
   margin: 8px 0;
 }
 
-.card:hover {
+/* .card:hover {
   transform: translateY(-5px);
+} */
+
+
+.highlight-product {
+  -webkit-box-shadow: 0 0 1px 3px #000 inset;
+  -mox-box-shadow: 0 0 1px 3px #000 inset;
+  border: #efefef 2px solid;
+  box-shadow: 10px 10px 10px #ccc;
+  transform: scale(1.0s);
 }

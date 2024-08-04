@@ -1,4 +1,4 @@
-<div class="card" appHighlight>
+<div class="card" appHighlight [disableProduct]="!product.is_in_inventory">
   <img [src]="product.imageURL" alt="{{ product.name }}">
   <div class="card-content">
     <h2 appHover>{{ product.name }}</h2>

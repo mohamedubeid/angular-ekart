@@ -29,12 +29,3 @@
 /* .card:hover {
   transform: translateY(-5px);
 } */
-
-
-.highlight-product {
-  -webkit-box-shadow: 0 0 1px 3px #000 inset;
-  -mox-box-shadow: 0 0 1px 3px #000 inset;
-  border: #efefef 2px solid;
-  box-shadow: 10px 10px 10px #ccc;
-  transform: scale(1.0s);
-}
